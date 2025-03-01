@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav-btn {
+    @apply text-lg font-semibold text-blue-600 hover:text-blue-800 transition;
+}
+
+.search-bar {
+    @apply w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400;
+}
+
+.report-card {
+    @apply bg-white p-4 rounded-xl shadow-md;
+}
+
+.child-name {
+    @apply text-xl font-bold;
+}
+
+.child-info {
+    @apply text-gray-600;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Missing Child</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-r from-purple-500 to-pink-500 min-h-screen p-6">
+
+    <!-- Navigation Bar -->
+    <nav class="flex justify-between items-center bg-white shadow-lg p-4 rounded-xl">
+        <h1 class="text-2xl font-bold text-purple-700">📢 Report Missing Child</h1>
+        <a href="index.html" class="px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600">Go to Main Page</a>
+    </nav>
+    
+    <!-- Form Section -->
+    <div class="mt-8 max-w-lg mx-auto bg-white p-6 rounded-xl shadow-lg">
+        <h2 class="text-2xl font-bold text-center text-gray-800">Report a Missing Child</h2>
+
+        <form id="reportForm" class="space-y-4 mt-4">
+            <input type="text" id="name" placeholder="Child's Name" class="w-full p-3 border rounded-lg">
+            <input type="text" id="location" placeholder="Last Seen Location" class="w-full p-3 border rounded-lg">
+            <input type="text" id="foundBy" placeholder="Person Reporting" class="w-full p-3 border rounded-lg">
+            <input type="text" id="contact" placeholder="Contact Number" class="w-full p-3 border rounded-lg">
+            <input type="file" id="imageFile" class="w-full p-3 border rounded-lg">
+            <button type="submit" class="w-full py-3 bg-green-500 text-white font-bold rounded-lg shadow-md hover:bg-green-600">Submit Report</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("reportForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById("name").value;
+            const location = document.getElementById("location").value;
+            const foundBy = document.getElementById("foundBy").value;
+            const contact = document.getElementById("contact").value;
+            const imageFile = document.getElementById("imageFile").files[0];
+
+            const reader = new FileReader();
+            reader.onloadend = function() {
+                const imageUrl = reader.result;
+
+                const report = { name, location, foundBy, contact, imageUrl };
+                
+                let reports = JSON.parse(localStorage.getItem("reports")) || [];
+                reports.push(report);
+                localStorage.setItem("reports", JSON.stringify(reports));
+
+                alert("Report submitted successfully!");
+                window.location.href = "index.html"; // Redirect to main page
+            };
+
+            if (imageFile) {
+                reader.readAsDataURL(imageFile);
+            } else {
+                const imageUrl = "https://via.placeholder.com/150";
+                const report = { name, location, foundBy, contact, imageUrl };
+                
+                let reports = JSON.parse(localStorage.getItem("reports")) || [];
+                reports.push(report);
+                localStorage.setItem("reports", JSON.stringify(reports));
+
+                alert("Report submitted successfully!");
+                window.location.href = "index.html"; // Redirect to main page
+            }
+        });
+    </script>
+
+</body>
+</html>
