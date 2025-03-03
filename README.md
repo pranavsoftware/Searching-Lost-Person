@@ -1,124 +1,127 @@
-# Searching Lost Person
+# 🔍 Searching Lost Person
 
-## Project Authors
+## 👥 Project Authors
 - **Pranav Rayban**
 - **Aitesh Sharma**
 - **Divyam Goel**
 
-## Project Title
+## 🏷️ Project Title
 **Searching Lost Person**
 
-## Technologies Used
-- MongoDB
-- Express
-- HTML, CSS, JavaScript
-- Node.js
+## 💻 Technologies Used
+- 🛢️ MongoDB
+- 🚀 Express
+- 🎨 HTML, CSS, JavaScript
+- ⚙️ Node.js
 
-## Domain
+## 🏛️ Domain
 **Public Safety**
 
-## Project Difficulty Level
+## 🎯 Project Difficulty Level
 **Medium**
 
 ---
 
-## Problem Statement
-Finding lost children in a large city is a difficult task. Parents often have to file formal complaints and wait for long durations, making the process tedious and inefficient. 
+## ❓ Problem Statement
+🔹 In a large city, finding a lost child can be extremely difficult. 
+🔹 Parents often have to file formal complaints and wait for long durations, making the process inefficient.
 
-This project provides an efficient mobile and web-based application to help locate lost children quickly. Parents can search for their missing child by uploading images or entering details. The system contains a database to store and retrieve missing person information efficiently.
+📱 This project provides an efficient mobile and web-based application to help locate lost children quickly. Parents can search for their missing child by uploading images or entering details. 
 
----
-
-## System Modules
-
-### **User**
-- Login
-- Register
-- File Complaint
-- Upload Images
-
-### **Public**
-- Register
-- Login
-- View Search Results
+💾 The system contains a database that stores and retrieves missing person information efficiently.
 
 ---
 
-## Project Evaluation Metrics
+## 🏗️ System Modules
 
-### **Code Quality**
-- Modular design
-- Safe: Ensures security and reliability
-- Testable: Supports unit and integration testing
-- Maintainable: Easy to update and scale
-- Portable: Compatible across operating systems
-- Code must be maintained on a public GitHub repository
-- Proper `README.md` should document the entire workflow and execution process
-- Follow standard coding guidelines ([PEP 8](https://www.python.org/dev/peps/pep-0008/))
+### **👤 User Module**
+- 🔑 Login
+- 📝 Register
+- 🆘 File Complaint
+- 📤 Upload Images
 
-### **Database**
-- MongoDB is used for data storage
-
-### **Cloud Deployment**
-- The project can be hosted on AWS, Azure, or GCP
-
-### **API & UI**
-- Expose functionalities as APIs or provide a user-friendly interface for model testing
-
-### **Logging**
-- Implement logging for every action performed using logging libraries
-
-### **Ops Pipeline**
-- If possible, integrate AI Ops tools such as DVC, MLflow, SageMaker, Azure ML Studio, Jenkins, CircleCI, TFX, TravisCI, etc.
-
-### **Deployment**
-- The model can be deployed on cloud platforms, edge devices, or locally with proper justification
-
-### **Solution Design**
-- Submit a complete solution design with HLD and LLD documents
-
-### **System Architecture**
-- Submit system architecture documentation, including wireframe design
-
-### **Model Latency Measurement**
-- Measure and optimize model response time for different dataset inputs
-
-### **Optimization Strategies**
-- Optimize code and architecture for efficiency
-- Provide test cases for validation
+### **🌍 Public Module**
+- 📝 Register
+- 🔑 Login
+- 🔍 View Search Results
 
 ---
 
-## Submission Requirements
+## 📏 Project Evaluation Metrics
 
-### **High-Level Document (HLD)**
-- Submit a well-structured high-level document
-- Sample Reference: [HLD Document Link]
+### **🛠️ Code Quality**
+- 🔹 Modular design
+- 🔹 ✅ Safe: Ensures security and reliability
+- 🔹 🧪 Testable: Supports unit and integration testing
+- 🔹 🔧 Maintainable: Easy to update and scale
+- 🔹 🖥️ Portable: Compatible across operating systems
+- 🔹 📂 Code must be maintained on a public GitHub repository
+- 🔹 📖 Proper `README.md` should document the entire workflow and execution process
+- 🔹 📜 Follow standard coding guidelines ([PEP 8](https://www.python.org/dev/peps/pep-0008/))
 
-### **Low-Level Document (LLD)**
-- Submit a detailed low-level document
-- Sample Reference: [LLD Document Link]
+### **💾 Database**
+- ✅ MongoDB is used for data storage
 
-### **System Architecture**
-- Submit a structured architecture document
-- Sample Reference: [Architecture Document Link]
+### **☁️ Cloud Deployment**
+- ✅ The project can be hosted on AWS, Azure, or GCP
 
-### **Wireframe**
-- Provide a visual representation of the system workflow
-- Sample Reference: [Wireframe Document Link]
+### **🔗 API & UI**
+- ✅ Expose functionalities as APIs or provide a user-friendly interface for model testing
 
-### **Project Code**
-- Maintain the project in a GitHub public repository
-- Sample Reference: [Project Code Sample Link]
+### **📝 Logging**
+- ✅ Implement logging for every action performed using logging libraries
 
-### **Detailed Project Report (DPR)**
-- Submit a comprehensive project report following the given sample format
-- Sample Reference: [DPR Sample Link]
+### **🔄 Ops Pipeline**
+- ✅ If possible, integrate AI Ops tools such as DVC, MLflow, SageMaker, Azure ML Studio, Jenkins, CircleCI, TFX, TravisCI, etc.
 
-### **Project Demo Video**
-- Record a **5-minute** demonstration video of the project
-- Sample Reference: [Project Demo Sample Link]
+### **🚀 Deployment**
+- ✅ The model can be deployed on cloud platforms, edge devices, or locally with proper justification
 
-### **LinkedIn Project Post**
-- Share project details on LinkedIn and submit the post link
-- Sample Reference: [LinkedIn Post Sample Link]
+### **📐 Solution Design**
+- ✅ Submit a complete solution design with HLD and LLD documents
+
+### **🖥️ System Architecture**
+- ✅ Submit system architecture documentation, including wireframe design
+
+### **⏳ Model Latency Measurement**
+- ✅ Measure and optimize model response time for different dataset inputs
+
+### **⚡ Optimization Strategies**
+- ✅ Optimize code and architecture for efficiency
+- ✅ Provide test cases for validation
+
+---
+
+## 📑 Submission Requirements
+
+### **📄 High-Level Document (HLD)**
+- ✅ Submit a well-structured high-level document
+- 📌 Sample Reference: [HLD Document Link]
+
+### **📜 Low-Level Document (LLD)**
+- ✅ Submit a detailed low-level document
+- 📌 Sample Reference: [LLD Document Link]
+
+### **🏛️ System Architecture**
+- ✅ Submit a structured architecture document
+- 📌 Sample Reference: [Architecture Document Link]
+
+### **🖌️ Wireframe**
+- ✅ Provide a visual representation of the system workflow
+- 📌 Sample Reference: [Wireframe Document Link]
+
+### **📂 Project Code**
+- ✅ Maintain the project in a GitHub public repository
+- 📌 Sample Reference: [Project Code Sample Link]
+
+### **📖 Detailed Project Report (DPR)**
+- ✅ Submit a comprehensive project report following the given sample format
+- 📌 Sample Reference: [DPR Sample Link]
+
+### **🎥 Project Demo Video**
+- ✅ Record a **5-minute** demonstration video of the project
+- 📌 Sample Reference: [Project Demo Sample Link]
+
+### **💼 LinkedIn Project Post**
+- ✅ Share project details on LinkedIn and submit the post link
+- 📌 Sample Reference: [LinkedIn Post Sample Link]
