@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missing Complaints</title>
+    <link rel="stylesheet" href="./missing.css">
+    <script defer src="./missing.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Missing Complaints Info</h1>
+        <div class="header-search">
+            <input type="text" id="search-bar" placeholder="Search by name..." oninput="filterComplaints()">
+        </div>
+        <div class="header-buttons">
+            
+            <button id="post-complaint">Post Complaint</button>
+            <button id="go-back">Scan Face</button>
+            <button id="go-back" onclick="history.back()">Go Back</button>
+            
+        </div>
+    </header>
+    
+
+    <main>
+        <div id="complaints-container" class="grid-container"></div>
+    </main>
+</body>
+</html>
+
+<script>
+    document.getElementById("go-back").addEventListener("click", function () {
+    window.location.href = "../FaceScan/"; // Change to the correct file path
+});
+
+</script>
+
+<style>
+    .header-search {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+#search-bar {
+    padding: 8px;
+    width: 250px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+</style>

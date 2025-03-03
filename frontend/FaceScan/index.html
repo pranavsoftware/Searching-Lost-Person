@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Recognition</title>
+    <link rel="stylesheet" href="./face scan.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Face Recognition</div>
+        <nav>
+            <ul>
+                <li><a href="../missing panel/">Go Back</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Face Recognition</h1>
+        <p>Upload an image for face recognition processing</p>
+
+        <div class="upload-section">
+            <input type="file" id="imageUpload" accept="image/*">
+            <button onclick="uploadImage()">Upload Image</button>
+        </div>
+
+        <div id="status-message" class="status-message"></div>
+        <div id="message" class="message"></div>
+
+        <div id="result-section" class="result-section">
+            <h3>Detected Face</h3>
+            <img id="result" src="" alt="Detected Face" class="result-img">
+            <p id="result-message"></p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Face Recognition Project | All Rights Reserved</p>
+    </footer>
+
+    <script src="./face scan.js"></script>
+</body>
+</html>

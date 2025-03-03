@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Searching Lost Person</title>
+
+</head>
+<body>
+    <header>
+        <h1>Complaint Dashboard</h1>
+        <button id="logoutBtn" class="logout-btn">Logout</button>
+    </header>
+
+    <div class="container">
+        <h2>Register a Lost Person Complaint</h2>
+        <form id="complaintForm">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Full Name" required>
+
+            <label for="age">Age</label>
+            <input type="number" id="age" placeholder="Age" required>
+
+            <label for="gender">Gender</label>
+            <select id="gender" required>
+                <option value="">Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="description">Description</label>
+            <textarea id="description" placeholder="Enter Description" required></textarea>
+
+            <label for="location">Last Seen Location</label>
+            <input type="text" id="location" placeholder="Last Seen Location" required>
+
+            <label for="dateMissing">Date Missing</label>
+            <input type="date" id="dateMissing" required>
+
+            <label for="contact">Contact Number</label>
+            <input type="tel" id="contact" placeholder="Contact Number" required>
+
+            <label for="imageFile">Upload Image</label>
+            <input type="file" id="imageFile" accept="image/*">
+            <img id="imagePreview" src="#" alt="Image Preview">
+
+            <button type="submit">Submit Complaint</button>
+        </form>        
+    </div>
+
+    <div class="container">
+        <h2>List of Lost Persons</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Description</th>
+                    <th>Location</th>
+                    <th>Date Missing</th>
+                    <th>Contact</th>
+                    <th>Image</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="complaintsTableBody">
+                <!-- Complaints will be inserted here dynamically -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
+
+<style>
+    /* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 900px;
+    background: white;
+    padding: 20px;
+    margin: 30px auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #15c777;
+    color: white;
+    padding: 15px 20px;
+}
+
+header h1 {
+    font-size: 22px;
+}
+
+.logout-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.logout-btn:hover {
+    background-color: darkred;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+input, select, textarea, button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Image Preview */
+#imagePreview {
+    display: none;
+    max-width: 150px;
+    border-radius: 5px;
+    margin-top: 10px;
+    border: 2px solid #ccc;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    font-size: 14px;
+}
+
+th {
+    background-color: #007BFF;
+    color: white;
+}
+
+/* Image Styling */
+td img {
+    border-radius: 5px;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border: 2px solid #ddd;
+}
+
+/* Adjust column widths */
+th:nth-child(1), td:nth-child(1) { width: 12%; } /* Name */
+th:nth-child(2), td:nth-child(2) { width: 7%; }  /* Age */
+th:nth-child(3), td:nth-child(3) { width: 10%; } /* Gender */
+th:nth-child(4), td:nth-child(4) { width: 15%; } /* Description */
+th:nth-child(5), td:nth-child(5) { width: 15%; } /* Location */
+th:nth-child(6), td:nth-child(6) { width: 12%; } /* Date Missing */
+th:nth-child(7), td:nth-child(7) { width: 12%; } /* Contact */
+th:nth-child(8), td:nth-child(8) { width: 10%; } /* Image */
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+
+    td img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+</style>
